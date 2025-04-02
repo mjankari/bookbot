@@ -1,4 +1,4 @@
-from stats import get_num_words
+from stats import get_num_words, count_characters
 
 def get_book_text(filepath:str):
     '''
@@ -19,6 +19,8 @@ def split_book_content(text:str):
 def main():
     book_text = get_book_text("./books/frankenstein.txt")
     book_split = split_book_content(book_text)
+    char_count = count_characters(book_text)
     get_num_words(book_split)
+    print(char_count)
 
 main()
