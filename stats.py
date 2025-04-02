@@ -25,7 +25,15 @@ def sort_list(input:list):
     '''
     input_list = []
 
-    # Sort the list by count (in descending order)
-    input_list.sort(reverse=True, key=lambda x: x["count"])
+    # Convert each key-value pair to a dictionary
+    for char, count in input.items():
+        input_list.append({"char": char, "count": count})
+
+    # Define a helper function for sorting
+    def sort_on(dict):
+        return dict["count"]
+    
+    # Sort the list in descending order
+    input_list.sort(reverse=True, key=sort_on)
 
     return input_list
