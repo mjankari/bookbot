@@ -2,7 +2,7 @@ def get_num_words(words_list:list[str]):
     '''
     Print number of words found in a document.
     '''
-    print(f"{len(words_list)} words found in the document")
+    print(f"Found {len(words_list)} total words")
 
 def count_characters(text:str):
     '''
@@ -17,3 +17,15 @@ def count_characters(text:str):
         else:
             characters[char_lower] = 1
     return characters
+
+def sort_list(input:list):
+    '''
+    Takes the dictionary of characters and their counts and returns a sorted
+    list of dictionaries
+    '''
+    input_list = []
+
+    # Sort the list by count (in descending order)
+    input_list.sort(reverse=True, key=lambda x: x["count"])
+
+    return input_list
