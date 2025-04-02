@@ -13,5 +13,5 @@ python3 main.py <path_to_book>
 
 ## License
 
-See the [COPYING](./COYPING) file for license rights and limitations
+See the [COPYING](./COPYING) file for license rights and limitations
 (GNU GPLv3).
