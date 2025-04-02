@@ -1,3 +1,5 @@
+from stats import get_num_words
+
 def get_book_text(filepath:str):
     '''
     Takes a filepath as input and returns the contents of the file as a string.
@@ -16,7 +18,7 @@ def split_book_content(text:str):
 
 def main():
     book_text = get_book_text("./books/frankenstein.txt")
-    book_word_number = len(split_book_content(book_text))
-    print(f"{book_word_number} words found in the document")
+    book_split = split_book_content(book_text)
+    get_num_words(book_split)
 
 main()
